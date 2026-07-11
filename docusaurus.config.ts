@@ -2,6 +2,29 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+// Webpack plugin to remove the Open Sans preload tag (no crossorigin) injected by Infima
+// The font is still loaded via the stylesheets[] entry below, which HAS crossorigin='anonymous'
+class RemoveOpenSansPreloadPlugin {
+  apply(compiler: any) {
+    compiler.hooks.compilation.tap('RemoveOpenSansPreloadPlugin', (compilation: any) => {
+      const HtmlWebpackPlugin = compiler.options.plugins
+        .map((p: any) => p.constructor)
+        .find((c: any) => c.name === 'HtmlWebpackPlugin');
+      if (!HtmlWebpackPlugin) return;
+      HtmlWebpackPlugin.getHooks(compilation).beforeEmit.tapAsync(
+        'RemoveOpenSansPreloadPlugin',
+        (data: any, cb: any) => {
+          data.html = data.html.replace(
+            /<link[^>]+rel=["']preload["'][^>]+fonts\.googleapis\.com[^>]*Open[^>]*>/gi,
+            ''
+          );
+          cb(null, data);
+        }
+      );
+    });
+  }
+}
+
 const config: Config = {
   title: 'FITLiFE',
   tagline: 'Hệ thống quản lý phòng gym thông minh',
@@ -16,31 +39,25 @@ const config: Config = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   deploymentBranch: 'gh-pages',
-  headTags: [
-    // Fix: add crossorigin so Google Fonts preload credentials match
-    {
-      tagName: 'link',
-      attributes: {
-        rel: 'preconnect',
-        href: 'https://fonts.googleapis.com',
-        crossorigin: 'anonymous',
-      },
-    },
-    {
-      tagName: 'link',
-      attributes: {
-        rel: 'preconnect',
-        href: 'https://fonts.gstatic.com',
-        crossorigin: 'anonymous',
-      },
-    },
-  ],
-  // Fix: declare Open Sans with crossorigin so webpack preload tag matches fetch credentials
+  // Serve Open Sans WITH crossorigin so it actually loads correctly
   stylesheets: [
     {
       href: 'https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap',
       type: 'text/css',
       crossorigin: 'anonymous',
+    },
+  ],
+  // Custom webpack plugin to strip the bad preload tag Infima injects
+  plugins: [
+    function removeOpenSansPreload() {
+      return {
+        name: 'remove-open-sans-preload',
+        configureWebpack() {
+          return {
+            plugins: [new RemoveOpenSansPreloadPlugin()],
+          };
+        },
+      };
     },
   ],
   i18n: {
