@@ -1,0 +1,15 @@
+docs:
+  - title: "Tutorial"
+    children:
+      - title: "Giới thiệu"
+        url: /intro/
+      - title: "Tổng quan"
+        url: /GettingStarted/
+      - title: "Kiến trúc hệ thống"
+        url: /Architecture/
+      - title: "Hướng dẫn cài đặt"
+        url: /Installation/
+      - title: "API Services"
+        url: /Services/
+      - title: "License"
+        url: /License/
