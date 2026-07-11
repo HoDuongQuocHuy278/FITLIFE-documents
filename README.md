@@ -2,31 +2,27 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=FITLiFE&fontSize=80&fontColor=fff&animation=twinkling&fontAlignY=35&desc=Hệ%20thống%20quản%20lý%20phòng%20gym%20thông%20minh&descAlignY=60&descSize=20" width="100%"/>
 
-</div>
+<h1>💪 FITLiFE</h1>
 
-<div align="center">
-
-# 💪 FITLiFE
-
-**Hệ thống quản lý phòng gym toàn diện — Mobile · Web Admin · Backend API**
+<p><strong>Hệ thống quản lý phòng gym toàn diện — Mobile · Web Admin · Backend API</strong></p>
 
 <br/>
 
-[![GitHub Pages](https://img.shields.io/badge/🌐_Website-Live-success?style=for-the-badge&labelColor=1a1a2e&color=e05c1a)](https://HoDuongQuocHuy278.github.io/FITLIFE-documents/)
-[![Docs](https://img.shields.io/badge/📚_Docs-Docusaurus-blue?style=for-the-badge&labelColor=1a1a2e&color=3b82f6)](https://HoDuongQuocHuy278.github.io/FITLIFE-documents/intro/)
-[![License](https://img.shields.io/badge/📜_License-MIT-green?style=for-the-badge&labelColor=1a1a2e&color=22c55e)](LICENSE)
+<a href="https://HoDuongQuocHuy278.github.io/FITLIFE-documents/"><img src="https://img.shields.io/badge/🌐_Website-Live-success?style=for-the-badge&labelColor=1a1a2e&color=e05c1a" alt="Website"/></a>
+<a href="https://HoDuongQuocHuy278.github.io/FITLIFE-documents/intro/"><img src="https://img.shields.io/badge/📚_Docs-Docusaurus-blue?style=for-the-badge&labelColor=1a1a2e&color=3b82f6" alt="Docs"/></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/📜_License-MIT-green?style=for-the-badge&labelColor=1a1a2e&color=22c55e" alt="License"/></a>
 
-<br/>
+<br/><br/>
 
-![Laravel](https://img.shields.io/badge/Laravel_11-FF2D20?style=flat-square&logo=laravel&logoColor=white)
-![Vue.js](https://img.shields.io/badge/Vue.js_3-4FC08D?style=flat-square&logo=vue.js&logoColor=white)
-![React Native](https://img.shields.io/badge/React_Native-61DAFB?style=flat-square&logo=react&logoColor=black)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
-![PHP](https://img.shields.io/badge/PHP_8.2+-777BB4?style=flat-square&logo=php&logoColor=white)
+<img src="https://img.shields.io/badge/Laravel_11-FF2D20?style=flat-square&logo=laravel&logoColor=white" alt="Laravel"/>
+<img src="https://img.shields.io/badge/Vue.js_3-4FC08D?style=flat-square&logo=vue.js&logoColor=white" alt="Vue.js"/>
+<img src="https://img.shields.io/badge/React_Native-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React Native"/>
+<img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL"/>
+<img src="https://img.shields.io/badge/PHP_8.2+-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP"/>
 
-<br/>
+<br/><br/>
 
-> 🏋️ *"Kết nối - Quản lý - Phát triển cùng FITLiFE"*
+<em>🏋️ "Kết nối - Quản lý - Phát triển cùng FITLiFE"</em>
 
 </div>
 
