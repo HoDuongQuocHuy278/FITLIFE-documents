@@ -6,6 +6,8 @@ const config: Config = {
   title: 'FITLiFE',
   tagline: 'Hệ thống quản lý phòng gym thông minh',
   favicon: 'img/favicon.ico',
+  // Fix favicon.ico root request (browser always tries /favicon.ico)
+  // favicon.ico is also placed at static/favicon.ico → serves at /FITLIFE-documents/favicon.ico
   url: 'https://HoDuongQuocHuy278.github.io',
   baseUrl: '/FITLIFE-documents/',
   organizationName: 'HoDuongQuocHuy278',
@@ -31,6 +33,14 @@ const config: Config = {
         href: 'https://fonts.gstatic.com',
         crossorigin: 'anonymous',
       },
+    },
+  ],
+  // Fix: declare Open Sans with crossorigin so webpack preload tag matches fetch credentials
+  stylesheets: [
+    {
+      href: 'https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap',
+      type: 'text/css',
+      crossorigin: 'anonymous',
     },
   ],
   i18n: {
