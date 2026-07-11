@@ -4,8 +4,12 @@
  * work well for content-first websites.
  */
 
+/* Override Infima default Open Sans with Inter to fix preload credentials warning */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 /* You can override the default Infima variables here. */
 :root {
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
   --ifm-color-primary: #e05c1a;
   --ifm-color-primary-dark: #c95218;
   --ifm-color-primary-darker: #bf4d16;

@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'FITLiFE',
   tagline: 'Hệ thống quản lý phòng gym thông minh',
-  favicon: 'logo.png',
+  favicon: 'img/favicon.ico',
   url: 'https://HoDuongQuocHuy278.github.io',
   baseUrl: '/FITLIFE-documents/',
   organizationName: 'HoDuongQuocHuy278',
@@ -14,6 +14,25 @@ const config: Config = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   deploymentBranch: 'gh-pages',
+  headTags: [
+    // Fix: add crossorigin so Google Fonts preload credentials match
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preconnect',
+        href: 'https://fonts.googleapis.com',
+        crossorigin: 'anonymous',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossorigin: 'anonymous',
+      },
+    },
+  ],
   i18n: {
     defaultLocale: 'vi',
     locales: ['vi'],
